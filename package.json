@@ -28,7 +28,8 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "lint": "eslint --ext .js,jsx,ts,tsx src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lintStaged": "lint-staged --allow-empty"
   },
   "browserslist": [
     "last 3 versions",
@@ -75,12 +76,7 @@
     "stylelint": "^14.4.0",
     "webpack": "5.69.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --cache"
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --fix "
   }
 }
