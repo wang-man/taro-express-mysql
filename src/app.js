@@ -13,6 +13,7 @@ class App extends Component {
   // this.props.children 是将要会渲染的页面
   render() {
     const a = "1";
+    const b = "1";
     return this.props.children;
   }
 }
